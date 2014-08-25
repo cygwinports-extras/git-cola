@@ -1,7 +1,7 @@
 inherit python-distutils
 
 NAME="git-cola"
-VERSION=1.8.3
+VERSION=2.0.5
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Git Qt4 GUI"
@@ -9,7 +9,9 @@ DESCRIPTION="git-cola is a powerful git GUI with a slick and intuitive user
 interface."
 REQUIRES="git"
 HOMEPAGE="http://git-cola.github.io/"
-SRC_URI="http://git-cola.github.io/releases/${NAME}-${VERSION}.tar.gz"
+SRC_URI="https://github.com/git-cola/${NAME}/archive/v${VERSION}/${NAME}-v${VERSION}.tar.gz"
+
+ARCH=noarch
 
 src_install() {
 	cd ${B}
