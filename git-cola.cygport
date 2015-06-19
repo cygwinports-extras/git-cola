@@ -1,7 +1,7 @@
 inherit python-distutils
 
 NAME="git-cola"
-VERSION=2.0.5
+VERSION=2.2.1
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Git Qt4 GUI"
