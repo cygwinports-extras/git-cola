@@ -1,0 +1,33 @@
+--- origsrc/git-cola-2.8/cola/compat.py	2016-08-30 01:29:22.000000000 -0500
++++ src/git-cola-2.8/cola/compat.py	2016-11-08 11:42:41.219538900 -0600
+@@ -11,7 +11,7 @@ except ImportError:
+ PY2 = sys.version_info[0] == 2
+ PY3 = sys.version_info[0] >= 3
+ PY26_PLUS = PY2 and sys.version_info[1] >= 6
+-WIN32 = sys.platform == 'win32' or sys.platform == 'cygwin'
++WIN32 = sys.platform == 'win32'
+ 
+ if PY3:
+     def bstr(x):
+--- origsrc/git-cola-2.8/cola/core.py	2016-08-30 01:29:22.000000000 -0500
++++ src/git-cola-2.8/cola/core.py	2016-11-08 11:42:41.228539100 -0600
+@@ -250,7 +250,7 @@ def _win32_find_exe(exe):
+ 
+ 
+ # Portability wrappers
+-if sys.platform == 'win32' or sys.platform == 'cygwin':
++if sys.platform == 'win32':
+     fork = _fork_win32
+ else:
+     fork = _fork_posix
+--- origsrc/git-cola-2.8/cola/utils.py	2016-08-30 01:29:22.000000000 -0500
++++ src/git-cola-2.8/cola/utils.py	2016-11-08 11:42:41.232038300 -0600
+@@ -191,7 +191,7 @@ def is_darwin():
+ 
+ def is_win32():
+     """Return True on win32"""
+-    return sys.platform == 'win32' or sys.platform == 'cygwin'
++    return sys.platform == 'win32'
+ 
+ 
+ def expandpath(path):

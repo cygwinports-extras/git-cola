@@ -1,15 +1,16 @@
 inherit python-distutils
 
 NAME="git-cola"
-VERSION=2.2.1
+VERSION=2.8
 RELEASE=1
 CATEGORY="Devel"
-SUMMARY="Git Qt4 GUI"
+SUMMARY="Git Qt GUI"
 DESCRIPTION="git-cola is a powerful git GUI with a slick and intuitive user
 interface."
 REQUIRES="git"
 HOMEPAGE="http://git-cola.github.io/"
 SRC_URI="https://github.com/git-cola/${NAME}/archive/v${VERSION}/${NAME}-v${VERSION}.tar.gz"
+PATCH_URI="2.8-cygwin-posix.patch"
 
 ARCH=noarch
 
